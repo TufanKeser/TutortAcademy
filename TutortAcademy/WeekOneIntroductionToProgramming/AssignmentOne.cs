@@ -9,7 +9,7 @@ namespace TutortAcademy.WeekOneIntroductionToProgramming
     public class AssignmentOne
     {
 
-        public void findMaxOfThreeElements(int[] arr)
+        public void QuestionOne_findMaxOfThreeElements(int[] arr)
         {
             int maxValue = 0;
             for(int i = 0; i <arr.Length; i++)
@@ -24,7 +24,7 @@ namespace TutortAcademy.WeekOneIntroductionToProgramming
         }
 
 
-        public void findMinOfThreeElements(int[] arr)
+        public void QuestionTwo_findMinOfThreeElements(int[] arr)
         {
             
             int minValue = 0;
@@ -41,7 +41,7 @@ namespace TutortAcademy.WeekOneIntroductionToProgramming
             Console.ReadLine();
         }
 
-        public void findTheMidElementsOfThreeElements(int[] arr)
+        public void QuestionThree_findTheMidElementsOfThreeElements(int[] arr)
         {
 
             int iterator = (arr.Length + 1) / 2;
@@ -57,7 +57,7 @@ namespace TutortAcademy.WeekOneIntroductionToProgramming
 
         }
 
-        public void nTimesNumberTriangleWriter(int n)
+        public void QuestionFour_nTimesNumberTriangleWriter(int n)
         {
             for(int i = 1; i <=n; i++)
             {
@@ -70,7 +70,7 @@ namespace TutortAcademy.WeekOneIntroductionToProgramming
             }
         }
 
-        public void nTimesNumberTriangleWriterReverse(int n)
+        public void QuestionFive_nTimesNumberTriangleWriterReverse(int n)
         {
             for(int i = 0; i<=n; i++)
             {
@@ -83,7 +83,7 @@ namespace TutortAcademy.WeekOneIntroductionToProgramming
             }
         }
 
-        public void findOddElements(int[] arr)
+        public void QuestionSix_findOddElements(int[] arr)
         {
             int[] result = arr.Where(x => x % 2 != 0).ToArray();
             for(int i = 0; i < result.Length; i++)
@@ -97,25 +97,26 @@ namespace TutortAcademy.WeekOneIntroductionToProgramming
             
         }
 
-        public void findOddElementsSolTwo(int[] arr)
+        public void QuestionSix_findOddElementsSolTwo(int[] arr)
         {
-            List<int> result =  arr.ToList();
-            for(int i = 0; i < arr.Length; i++)
+            List<int> list = arr.ToList();
+            list.RemoveAll(x => x % 2 == 0);
+
+            for (int i = 0; i < list.Count; i++)
             {
-                if (arr[i] % 2 == 0)
-                {
-                    result.Remove(i);
-                }
-                Console.Write(arr[i].ToString());
-                if (arr[i] != arr.Last())
+                Console.Write(list[i]);
+
+                if (i < list.Count - 1)
                 {
                     Console.Write(",");
                 }
             }
 
+            Console.WriteLine();
+
         }
 
-        public void sumOfTheGivenArray(int[] arr)
+        public void QuestionSeven_sumOfTheGivenArray(int[] arr)
         {
             int sum = 0;
 
@@ -126,7 +127,7 @@ namespace TutortAcademy.WeekOneIntroductionToProgramming
             Console.WriteLine("Sum of the given array is " + sum.ToString());
         }
 
-        public void findFirstEvenNumber(int[] arr)
+        public void QuestionEight_findFirstEvenNumber(int[] arr)
         {
             int oddCount = 0;
             for (int i = 0; i < arr.Length; i++)
